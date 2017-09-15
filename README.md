@@ -70,4 +70,15 @@
 	```php
 	define('WP_DEBUG', false);
 	```
- 
+* **Oh Licneses:** This is a tricky part and has been a long going battle between WordPress and some theme vendors (and marketplaces) because items being sold in the marketplaces are usually not fully GPLed. Part of these items (for example PHP code) is licensed under GPL and the rest is proprietery licenced. Sometime the third party components like Bootstrap and many other JavaScript plugins are licensed under MIT/BSD/Apache and other different licenses available out there. This result a confusion which you must clarify while submitting your theme. You must mention to the reviewer that the theme is **Split Licenced**. In your theme style.css should mention it too
+
+	_Example_
+	
+	```css
+	/*
+	...
+	License: Split License
+	...
+	*/
+	
+	```
