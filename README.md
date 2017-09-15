@@ -91,7 +91,7 @@
 	wp_enqueue_script('jquery'); 
 	```
 	
-	_ Correct Example_
+	_Correct Example_
 	
 	```php
 	wp_enqueue_script( "bootstrap-js", mythemename_get_js_assets_dir()."/bootstrap.js", array("jquery"), null,true );
