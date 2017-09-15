@@ -8,7 +8,7 @@
 
 	While prefixing, please remember that refixes should consist of either your `themename_`, `authorname_`, or `frameworkname_`
 
-	**Example**
+	_Example_
 	
 	```php
 	$mythemename_variable = "whatever";
