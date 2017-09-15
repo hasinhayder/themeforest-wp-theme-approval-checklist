@@ -62,3 +62,12 @@
 * **No Comments:** If there are no comments in your WordPress posts, and you want to inform that to your users in your theme, the string must display as "No Comments". 
 
 	In one of our submissions, accidentially the trailing "s" was deleted, and the string turned into "No Comment" which resulted a soft rejection :)
+	
+* **No Notices, No Warnings, No Errors:** Zip zilch nada. Make sure that your theme doesn’t raise any PHP errors, notices or warnings. Enabling `wp_debug` inside your **wp-config.php** file can help you with this. Please also remove that your theme must not generate any runtime JavaScript errors as well. To deal with this please install the [Developer](https://wordpress.org/plugins/developer/) plugin from Automattic. Then turn on "Debug Bar" in the plugin serttings. You can also manually install the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin for this purpuse.
+
+	_Example_
+	
+	```php
+	define('WP_DEBUG', false);
+	```
+ 
