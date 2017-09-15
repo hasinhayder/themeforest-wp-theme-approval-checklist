@@ -109,3 +109,12 @@
 
 	![https://cdn-pro.dprcdn.net/files/acc_493641/EfuhRm](https://cdn-pro.dprcdn.net/files/acc_493641/EfuhRm) 
 	
+* **Watch out for plugin territory:** In one of our themes, we had added a feature called "Featured Posts" where anyone can check the "Feature This Post" checkbox in the post editor window. We had also added a new column in the "All Posts" table which showed a checkmark beside all the post titles that has been featured. Unfortunately this resulted in soft rejection. The reveiwer mentioned that it is a plugin territory code. 
+
+	So our suggestion is that don't incorporate any code in your theme that changes any default behavior, or look-n-feel in any core panel or component. Write a helper plugin and add those functionalitites in that plugin. 
+	
+	Besides, avoid the following things from your theme and move to your helper plugin.
+	
+	* Any call to `wp_mail()`
+	* Registering custom taxonomy
+	* Registering custom post type
