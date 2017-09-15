@@ -27,7 +27,7 @@
 	
 * **Rename your script and css handlers:** If you're enqueueing external css and JavaScript files, you need to rename your style and js handlers inside the `wp_enqueue_script()` function and use meaningful and readable handler names.  
 
-	**Example** 
+	_Example_
 	
 	```php
 	function mythemename_enqueue_js_and_css(){
