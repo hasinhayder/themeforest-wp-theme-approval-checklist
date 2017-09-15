@@ -104,3 +104,8 @@
 * **Escape, Escape & Fucking Escape:** All dynamic data must be correctly escaped for the context where it is rendered. Please perform a global search for **"echo $"** in your theme and take necessary actions. You can read more on properly escaping your code, here - [Escaping: Securing Output](https://vip.wordpress.com/documentation/validating-sanitizing-escaping/#escaping-securing-output)
 
 	While escaping, please also remember to late escape to give a clear picture about your escaped data to the reviewers. For example, check this section - [Escaping: Always Escape Late](https://vip.wordpress.com/documentation/validating-sanitizing-escaping/#always-escape-late)
+	
+* **No fallback for third party services:** I learned about this when we added an instagram gallery in one of our themes. On first installation, when there is no instagram username configured to display, we were using a fallback **username** to display that user's instagram feed. This behaviour caused soft rejection and we had to remove this fallback username. At the end, if there was no instagram username, we had to hide that section.
+
+	![https://cdn-pro.dprcdn.net/files/acc_493641/EfuhRm](https://cdn-pro.dprcdn.net/files/acc_493641/EfuhRm) 
+	
