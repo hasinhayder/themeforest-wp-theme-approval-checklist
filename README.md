@@ -82,3 +82,19 @@
 	*/
 	
 	```
+
+* **No direct enqueueing of jQuery:** If you're enqueueing third party JavaScript files or your theme scipt files, which often depends on jQuery, you should define the dependency via **dependency** param in wp_enqueue_script() function. Don't enqueue jQuery directly or individually, or it will result a soft rejection. Here's an example
+
+	_Example (Don't do this)_
+
+	```php
+	wp_enqueue_script('jquery'); 
+	```
+	
+	_ Correct Example_
+	
+	```php
+	wp_enqueue_script( "bootstrap-js", mythemename_get_js_assets_dir()."/bootstrap.js", array("jquery"), null,true );
+	```
+	
+	Once **jQuery** is definied as a dependency, WordPress will automatically enqueue it from the bundled version of jQuery that ships with WordPress.
