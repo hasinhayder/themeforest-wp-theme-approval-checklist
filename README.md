@@ -98,3 +98,5 @@
 	```
 	
 	Once **jQuery** is definied as a dependency, WordPress will automatically enqueue it from the bundled version of jQuery that ships with WordPress.
+	
+* **No inline scripts and styles:** You must use css class names and avoid inline css styles (as style attribue). You must also avoid inline JavaScript code through out your theme. Scripts and styles should not be hardcoded anywhere in your theme or added any other way but with `wp_enqueue_*` hook and to be added from the functions file. This includes custom JS/CSS. For inline styles use: [https://developer.wordpress.org/reference/functions/wp_add_inline_style/](https://developer.wordpress.org/reference/functions/wp_add_inline_style/) and for scripts [https://developer.wordpress.org/reference/functions/wp_add_inline_script/](https://developer.wordpress.org/reference/functions/wp_add_inline_script/)
