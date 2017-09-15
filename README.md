@@ -57,4 +57,8 @@
 	
 	For details you can check out this grappler documentation - [https://github.com/grappler/wp-standard-handles](https://github.com/grappler/wp-standard-handles)
 	
-* **Theme preview image size**: According to the WordPress org, the dimension of the "screenshot.png" *a.k.a "Theme Preview Image"* inside your theme directory should be of 1200px width and 900px height (1200x900). This is required to display the "theme preview image" properly on **retina / high-dpi** displays. 
+* **Theme preview image size:** According to the WordPress org, the dimension of the "screenshot.png" *a.k.a "Theme Preview Image"* inside your theme directory should be of 1200px width and 900px height (1200x900). This is required to display the "theme preview image" properly on **retina / high-dpi** displays. 
+
+* **No Comments:** If there are no comments in your WordPress posts, and you want to inform that to your users in your theme, the string must display as "No Comments". 
+
+	In one of our submissions, accidentially the trailing "s" was deleted, and the string turned into "No Comment" which resulted a soft rejection :)
