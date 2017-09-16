@@ -222,6 +222,9 @@ function mythemename_register_required_plugins() {
 }
 ```
 
+## No commented out code:
+This one is pretty straight-forward. If your theme contains commented out code or code blocks, you should remove those before submitting your theme for review. Otherwise, they will get back to you with this same message, again and again. 
+
 
 
 
