@@ -114,7 +114,7 @@ Once **jQuery** is definied as a dependency, WordPress will automatically enqueu
 You must use css class names and avoid inline css styles (as style attribue). You must also avoid inline JavaScript code through out your theme. Scripts and styles should not be hardcoded anywhere in your theme or added any other way but with `wp_enqueue_*` hook and to be added from the functions file. This includes custom JS/CSS. For inline styles use: [https://developer.wordpress.org/reference/functions/wp_add_inline_style/](https://developer.wordpress.org/reference/functions/wp_add_inline_style/) and for scripts [https://developer.wordpress.org/reference/functions/wp_add_inline_script/](https://developer.wordpress.org/reference/functions/wp_add_inline_script/)
 
 ## Escape, Escape & Fucking Escape:
-All dynamic data must be correctly escaped for the context where it is rendered. Please perform a global search for `echo \$` in your theme and take necessary actions. You can read more on properly escaping your code, here - [Escaping: Securing Output](https://vip.wordpress.com/documentation/validating-sanitizing-escaping/#escaping-securing-output)
+All dynamic data must be correctly escaped for the context where it is rendered. Please perform a global search for `echo $` in your theme and take necessary actions. You can read more on properly escaping your code, here - [Escaping: Securing Output](https://vip.wordpress.com/documentation/validating-sanitizing-escaping/#escaping-securing-output) 
 
 While escaping, please also remember to late escape to give a clear picture about your escaped data to the reviewers. For example, check this section - [Escaping: Always Escape Late](https://vip.wordpress.com/documentation/validating-sanitizing-escaping/#always-escape-late)
 	
