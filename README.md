@@ -56,6 +56,50 @@
 	```
 	
 	For details you can check out this grappler documentation - [https://github.com/grappler/wp-standard-handles](https://github.com/grappler/wp-standard-handles)
+
+* **Adding Google Font:** Whenever we're addding google font(s), we have to make sure that we are following the best practice. We have to add google font in the following way because most of the fonts doesn't support characters from all the languages.
+
+	_Example_
+
+	``` php
+	wp_enqueue_style( 'prefix-google-font', prefix_get_google_font_url() );
+	function prefix_get_google_font_url() {
+		$font_url = '';
+
+		/* Translators: If there are characters in your language that are not
+		* supported by Arizonia, translate this to 'off'. Do not translate
+		* into your own language.
+		*/
+		$arizonia = _x( 'on', 'Arizonia font: on or off', 'massive' );
+
+		/* Translators: If there are characters in your language that are not
+		* supported by Source Sans Pro, translate this to 'off'. Do not translate
+		* into your own language.
+		*/
+		$source_sans_pro = _x( 'on', 'Source Sans Pro font: on or off', 'massive' );
+
+		if ( 'off' !== $arizonia || 'off' !== $source_sans_pro ) {
+			$font_families = array();
+
+			if ( 'off' !== $arizonia ) {
+				$font_families[] = 'Arizonia';
+			}
+
+			if ( 'off' !== $source_sans_pro ) {
+				$font_families[] = 'Source Sans Pro:400,300,400italic,600';
+			}
+
+			$query_args = array(
+				'family' => urlencode( implode( '|', $font_families ) ),
+				'subset' => urlencode( 'latin,latin-ext' ),
+			);
+
+			$font_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+		}
+
+		return esc_url_raw( $font_url );
+	}
+	```
 	
 * **Theme preview image size:** According to the WordPress org, the dimension of the "screenshot.png" *a.k.a "Theme Preview Image"* inside your theme directory should be of 1200px width and 900px height (1200x900). This is required to display the "theme preview image" properly on **retina / high-dpi** displays. 
 
