@@ -201,7 +201,7 @@ function mythemename_register_required_plugins() {
 			'slug'               => 'themename-helper-plugin',
 			'source'             => get_template_directory() . '/plugin/themename-helper-plugin.zip',
 			'required'           => true,
-			'force_activation'   => true,
+			'force_activation'   => false,
 			'force_deactivation' => false,
 		),
 
@@ -226,7 +226,17 @@ function mythemename_register_required_plugins() {
 This one is pretty straight-forward. If your theme contains commented out code or code blocks, you should remove those before submitting your theme for review. Otherwise, they will get back to you with this same message, again and again. 
 
 
+##  Search form issues: 
+you cannot simply place your search form markup in your theme because that will cause a rejection. Reveiwers will tell you that you should use the function `get_search_form()`. So what can you do if you want to modify the search form elements? Do you have to abandon your shiny new search form markup that you designed previously? No! You can still display your own search form using the filter `get_search_form`. Here is an example
 
+_Example_
+```php
+add_filter("get_search_form","mythemename_get_search_form");
+
+function mythemename_get_search_form($form){
+	return "<your own search form code>";
+}
+``
 
 
 
