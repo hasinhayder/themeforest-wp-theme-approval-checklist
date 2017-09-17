@@ -238,6 +238,10 @@ function mythemename_get_search_form($form){
 }
 ```
 
+## Post password:
+
+if a post is password protected, you should not display the comment section, or any other information that is related to that post, until the password was entered by the user. This also include the number of comments. Check out this function [post_password_required](https://codex.wordpress.org/Function_Reference/post_password_required)
+
 
 
 
