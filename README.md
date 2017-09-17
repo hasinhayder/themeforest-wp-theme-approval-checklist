@@ -236,7 +236,7 @@ add_filter("get_search_form","mythemename_get_search_form");
 function mythemename_get_search_form($form){
 	return "<your own search form code>";
 }
-``
+```
 
 
 
