@@ -182,6 +182,7 @@ Besides, avoid the following things from your theme and move to your helper plug
 * Any call to `wp_mail()`
 * Registering custom taxonomy
 * Registering custom post type
+* Registering custom shortcode
 
 ## Bundle your zipped plugin:
 
@@ -222,16 +223,15 @@ function mythemename_register_required_plugins() {
 }
 ```
 
-
-
-
-
-
-
-
-
-
-
+## Miscellaneous:
+* To add partial template (segment of a large template) you have to use `get_template_part()` function, cannot use `include()` or `require()` family functions.
+* To add library or helper functions you have to use `include()` or `require()` family functions, cannot use `load_template()` function.
+* To get the directory path you must use `get_template_directory()` or `get_stylesheet_directory()` function. You cannot use `__DIR__` constant or any other approach, like `dirname(__FILE__)`.
+* To get the URI of any resource you have to use `get_template_directory_uri()` or `get_stylesheet_directory_uri()` function.
+* If you use `home_url()` function anywhere, make sure to pass a forward slash as a parameter `home_url( '/' )`.
+* You cannot add any Google Analytics feature. For instance input field to add Google Analytics tracking code.
+* You cannot add any feature which shows user system information. Avada has system status checker but it was added later.
+* All custom JavaScript must be in **strict mode**.
 
 
 
