@@ -33,10 +33,10 @@
 	function mythemename_enqueue_js_and_css(){
 		$admin_js = admin_url("admin-ajax.php");
 		wp_enqueue_script( "bootstrap-js", mythemename_get_js_assets_dir()."/bootstrap.js", array("jquery"), null,true );
-		wp_enqueue_script( "cookie.js", mythemename_get_js_assets_dir()."/js.cookie.js", array("jquery"), null,true );
-		wp_enqueue_script( "modernizer", mythemename_get_js_assets_dir()."/modernizr.custom.js", array("jquery"), null,true );
-		wp_enqueue_script( "jquery-slicknav", mythemename_get_js_assets_dir()."/jquery.slicknav.min.js", array("jquery"), null,true );
-		wp_enqueue_script( "jquery-owl", mythemename_get_js_assets_dir()."/owl.carousel.min.js", array("jquery"), null,true );
+		wp_enqueue_script( "cookie-js", mythemename_get_js_assets_dir()."/js.cookie.js", array("jquery"), null,true );
+		wp_enqueue_script( "modernizer-js", mythemename_get_js_assets_dir()."/modernizr.custom.js", array("jquery"), null,true );
+		wp_enqueue_script( "jquery-slicknav-js", mythemename_get_js_assets_dir()."/jquery.slicknav.min.js", array("jquery"), null,true );
+		wp_enqueue_script( "jquery-owl-js", mythemename_get_js_assets_dir()."/owl.carousel.min.js", array("jquery"), null,true );
 		wp_enqueue_script( "mythemename", mythemename_get_js_assets_dir()."/scripts.js", array("jquery"), "1.0.1", true);
 		wp_localize_script("mythemename","mythemename",array("ajaxurl"=>$admin_js));
 	
